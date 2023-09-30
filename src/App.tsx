@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Requirements from "./Requirements";
+import Requirements from "./Requirements";
 import { requestUsers, requestUsersWithError, User, Query } from "./api"; // Импортируем функции и интерфейсы из api.tsx
 import "./styles.css";
 
@@ -40,7 +40,6 @@ export default function App() {
   return (
     <div className="app">
       {" "}
-      {/* Добавляем класс app */}
       <h1>User List</h1>
       <label>
         Name Filter:
@@ -70,7 +69,7 @@ export default function App() {
           <button onClick={() => setPage(page + 1)}>Next</button>
         </div>
       </label>
-      {/* <Requirements /> */}
+  
       {isLoading ? (
         "Loading..."
       ) : error ? (
